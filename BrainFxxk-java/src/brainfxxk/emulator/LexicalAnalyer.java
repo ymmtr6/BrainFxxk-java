@@ -1,24 +1,43 @@
-package emulator;
+package brainfxxk.emulator;
 import java.util.*;
 
+/**
+ * 
+ * @author riku
+ *
+ */
 public class LexicalAnalyer {
 	
+	/**
+	 * get TokenArrays;
+	 * @param str String
+	 * @return List<Token>
+	 */
 	public List<Token> parse(String str){
 		ArrayList<Token> list = new ArrayList<>();
 		for(int i= 0; i < str.length(); i++){
-			Token t = parseToken(str.charAt(i));
+			Token t = getToken(str.charAt(i));
 			if(t != null)
 				list.add(t);
 		}
 		return list;
 	}
 
+	/**
+	 * test method.(hello world)
+	 * @return List<Token>
+	 */
 	public List<Token> helloWorld() {
 		String cord = ">+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.[-]>++++++++[<++++>-]<.>+++++++++++[<+++++>-]<.>++++++++[<+++>-]<.+++.------.--------.[-]>++++++++[<++++>-]<+.[-]++++++++++.\0";
 		return parse(cord);
 	}
 
-	public Token parseToken(char c) {
+	/**
+	 * trans token.
+	 * @param c	character
+	 * @return Token
+	 */
+	public Token getToken(char c) {
 		switch (c) {
 		case '>':
 			return Token.INC;

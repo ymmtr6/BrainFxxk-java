@@ -1,5 +1,10 @@
-package emulator;
+package brainfxxk.emulator;
 
+/**
+ * Token
+ * @author riku
+ *
+ */
 public enum Token {
 	INC(0), // >
 	DEC(1), // <

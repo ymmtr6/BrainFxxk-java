@@ -1,9 +1,9 @@
-package emulator;
+package brainfxxk.emulator;
 import java.util.*;
 
 /**
- * 
- * @author rikuy
+ * Emulator(BrainFxxk)
+ * @author riku
  *
  */
 public class BFEmulator {
